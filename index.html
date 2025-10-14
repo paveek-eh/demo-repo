@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Demo</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .message {
+      text-align: center;
+      animation: colors 1.5s infinite;
+      line-height: 1.6;
+    }
+
+    .line1 {
+      font-size: 3em;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0.2em 0;
+    }
+
+    .line2 {
+      font-size: 2em;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin: 0.2em 0;
+    }
+
+    .line3 {
+      font-size: 1.5em;
+      font-weight: 600;
+      text-transform: capitalize;
+      margin-top: 0.3em;
+    }
+
+    @keyframes colors {
+      0% { color: red; }
+      25% { color: yellow; }
+      50% { color: lime; }
+      75% { color: orange; }
+      100% { color: red; }
+    }
+  </style>
+</head>
+<body>
+<div class="message" role="alert" aria-live="polite">
+  <div class="line1">⚠️ BEWARE ⚠️</div>
+  <div class="line2">You Are Hacked 🔓</div>
+  <div class="line3">Not All QR Codes Are Safe 🚫</div>
+</div>
+
+<script>
+  // Optional redirect after 3 seconds
+  setTimeout(() => {
+    window.location.href = "https://raw.githubusercontent.com/paveek-eh/demo-repo/refs/heads/main/infosec.png";
+  }, 3000);
+</script>
+</body>
+</html>

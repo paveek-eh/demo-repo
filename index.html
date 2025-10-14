@@ -17,10 +17,24 @@
     }
 
     .message {
-      font-size: 3em;
-      font-weight: bold;
       text-align: center;
       animation: colors 1s infinite;
+    }
+
+    .warning-heading {
+      font-size: 1.8em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin: 0;
+    }
+
+    .warning-sub {
+      font-size: 1.3em;  /* Increased from 0.9em to medium size */
+      font-weight: 500;
+      margin-top: 0.25em;
+      opacity: 0.95;
+      text-transform: capitalize;
     }
 
     @keyframes colors {
@@ -33,18 +47,16 @@
   </style>
 </head>
 <body>
-<div class="message">YOU HAVE BEEN HACKED!</div>
+<div class="message" role="alert" aria-live="polite">
+  <div class="warning-heading">BEWARE !! YOU ARE HACKED</div>
+  <div class="warning-sub">Not All QR Code Are Safe !!</div>
+</div>
 
 <script>
-  // Wait 2 seconds then redirect
+  // Wait 1.5 seconds then redirect (optional)
   setTimeout(function() {
     window.location.href = "https://raw.githubusercontent.com/paveek-eh/demo-repo/refs/heads/main/infosec.png"; // Replace with your link
   }, 1500);
 </script>
 </body>
 </html>
-
-
-
-
-
